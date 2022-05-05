@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BBB2E5C0-4ADF-3A80-A14A-32924295B3CA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>Utilities</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Utilities.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Utilities</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Utilities.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Utilities</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Utilities.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Utilities</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Utilities.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Utilities</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_XKEYCHECK_H;PROJECT_DIR="C:/Users/koach/Desktop/project3/RollerCoasters";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_XKEYCHECK_H;PROJECT_DIR=\"C:/Users/koach/Desktop/project3/RollerCoasters\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR="C:/Users/koach/Desktop/project3/RollerCoasters";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR=\"C:/Users/koach/Desktop/project3/RollerCoasters\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR="C:/Users/koach/Desktop/project3/RollerCoasters";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR=\"C:/Users/koach/Desktop/project3/RollerCoasters\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR="C:/Users/koach/Desktop/project3/RollerCoasters";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_XKEYCHECK_H;PROJECT_DIR=\"C:/Users/koach/Desktop/project3/RollerCoasters\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\koach\Desktop\project3\RollerCoasters\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glad4.6\include;C:\Users\koach\Desktop\project3\RollerCoasters\include\glm-0.9.8.5\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\koach\Desktop\project3\RollerCoasters\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/koach/Desktop/project3/RollerCoasters/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/koach/Desktop/project3/RollerCoasters -BC:/Users/koach/Desktop/project3/RollerCoasters/build --check-stamp-file C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/koach/Desktop/project3/RollerCoasters/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/koach/Desktop/project3/RollerCoasters -BC:/Users/koach/Desktop/project3/RollerCoasters/build --check-stamp-file C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/koach/Desktop/project3/RollerCoasters/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/koach/Desktop/project3/RollerCoasters -BC:/Users/koach/Desktop/project3/RollerCoasters/build --check-stamp-file C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/koach/Desktop/project3/RollerCoasters/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/koach/Desktop/project3/RollerCoasters -BC:/Users/koach/Desktop/project3/RollerCoasters/build --check-stamp-file C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeCXXCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeRCCompiler.cmake;C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\3.21.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\koach\Desktop\project3\RollerCoasters\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\3DUtils.h" />
+    <ClCompile Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\3DUtils.cpp" />
+    <None Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\ArcBallCam.H">
+    </None>
+    <ClCompile Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\ArcBallCam.cpp" />
+    <None Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\Pnt3f.H">
+    </None>
+    <ClCompile Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Utilities\Pnt3f.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\koach\Desktop\project3\RollerCoasters\build\ZERO_CHECK.vcxproj">
+      <Project>{51A8F0D0-4B38-3F18-BBBF-08FE001E1B67}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

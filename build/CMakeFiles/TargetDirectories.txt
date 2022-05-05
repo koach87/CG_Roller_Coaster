@@ -1,0 +1,4 @@
+C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/RollerCoasters.dir
+C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/Utilities.dir
+C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/koach/Desktop/project3/RollerCoasters/build/CMakeFiles/ZERO_CHECK.dir
