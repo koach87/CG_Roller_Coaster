@@ -199,19 +199,44 @@ advanceTrain(float dir)
 	// TODO: make this work for your train
 	//#####################################################################
 
+	auto nextY = trainView->point_list[(trainView->point_index + trainView->carInterval * (trainView->carAmount - 1) + 1) % trainView->point_list.size()].y;
+	auto nowY = trainView->point_list[(trainView->point_index + trainView->carInterval * (trainView->carAmount - 1)) % trainView->point_list.size()].y;
+	// 下個高度低(-)->加速，下個高度高(+)->減速
+	auto diffY = nextY - nowY;
+	//向上
+	if (diffY > 0.1f)
+	{
+		if (acc > 0)
+			acc = 0;
+		acc -= 0.1;
+	}
+	//向下
+	else if (diffY <-0.1f)
+	{
+		if (acc < 0)
+			acc = 0;
+		acc += 0.1;
 
+	}
+	//水平
+	else
+	{
+		acc = 0;
+	}
 
+	if (acc < -speed->value())
+	{
+		acc = -speed->value() + 1;
+	}
 
-	//上個y跟這個y比較，+速度遞減，-速度遞增。
-	auto diffY = trainView->point_list[(trainView->point_index* trainView->carInterval* (trainView->carAmount-1) + 1) % trainView->point_list.size()].y - 	
-		trainView->point_list[(trainView->point_index * trainView->carInterval * (trainView->carAmount - 1) ) % trainView->point_list.size()].y;
-	if (diffY > 0.01f) gravity -= 0.1f;
-	else if (diffY < -0.01f)gravity += 0.1f;
-	else gravity = 1.0f;
-	
-	if (gravity <= 0.5f)gravity = 0.5f;
-	if (gravity >= 1.5f)gravity = 1.5f;
-	trainView->point_index= (int((float)speed->value()*10* gravity)+trainView->point_index )% trainView->point_list.size();
+	if (speed->value())
+	{
+		trainView->point_index = ((int)acc+ (int)speed->value() + trainView->point_index) % trainView->point_list.size();
+	}
+
+	//std::cout << gravity << std::endl;
+	// No gravity
+	//trainView->point_index++;
 
 #ifdef EXAMPLE_SOLUTION
 	// note - we give a little bit more example code here than normal,

@@ -33,10 +33,35 @@
     <None Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\Track.H" />
     <None Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\TrainView.H" />
     <None Include="C:\Users\koach\Desktop\project3\RollerCoasters\src\TrainWindow.H" />
+    <None Include="..\src\root_directory.h">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\src\model_loading.fs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\src\model_loading.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="model_loading.fs" />
+    <None Include="model_loading.vs" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{E3AF5B41-9555-3698-8BE6-F8A8562B87C0}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\mesh.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\shader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\filesystem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -28,6 +28,11 @@
 *************************************************************************/
 #define _USE_MATH_DEFINES
 
+// import opencv2
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+#include <iostream>
 #include <math.h>
 
 #include <windows.h>
@@ -110,34 +115,92 @@ float floorColor2[3] = { .3f, .3f, .3f }; // Dark color
 //*************************************************************************
 //
 // Draw the check board floor without texturing it
+// 
+
+//===============================================================================
+//float getHeight(int x, int z,cv::Mat image) {
+//	cv::Mat dstImage = image.clone();
+//	if (x < 0 || x >= dstImage.getHeight() || z<0 || z>image.getHeight()) {
+//		return 0;
+//	}
+//	float height = image.at<cv::Vec3b>(x, z);
+//}
 //===============================================================================
 void drawFloor(float size, int nSquares)
 //===============================================================================
 {
 	//load height map image
-	
+	cv::Mat img = cv::imread("C:\\Users\\koach\\Desktop\\heightmap.png", cv::IMREAD_COLOR);
+	if (img.empty())
+	{
+		std::cout << "Could not read the heightmap. " << std::endl;
+	}
+	float MAX_HEIGHT = 100;
+	img = img / 255 * MAX_HEIGHT- MAX_HEIGHT/2;
+
+	// get (0, 0) idensity
+	int height;
+	//std::cout<< height <<"\n";
+
+	float heightMap[200][200];
+	for (int i = 0; i < 200; i++) {
+		for (int j = 0; j < 200; j++) {
+			heightMap[i][j] = img.at<cv::Vec3b>(i, j)[0];
+		}
+	}
+
+
 
 	// parameters:
 	float maxX = size/2, maxY = size/2;
 	float minX = -size/2, minY = -size/2;
-
 	int x,y,v[3],i;
 	float xp,yp,xd,yd;
+	float matrixA[3], matrixB[3], matrixMid[3], matrixNormal[3];
+	float n_x, n_y, n_z;
 	v[2] = 0;
 	xd = (maxX - minX) / ((float) nSquares);
 	yd = (maxY - minY) / ((float) nSquares);
 	glBegin(GL_QUADS);
-	for(x=0,xp=minX; x<nSquares; x++,xp+=xd) {
-		for(y=0,yp=minY,i=x; y<nSquares; y++,i++,yp+=yd) {
-			glColor4fv(i%2==1 ? floorColor1:floorColor2);
-			glNormal3f(0, 1, 0); 
-			glVertex3d(xp,      0, yp);
-			glVertex3d(xp,      0, yp + yd);
-			glVertex3d(xp + xd, 0, yp + yd);
-			glVertex3d(xp + xd, 0, yp);
 
-		} // end of for j
-	}// end of for i
+	for (float i = -99; i < 100; i++) {
+		for (float j = -99; j < 100; j++) {
+			glColor3f(0.0f, 0.5f, 0.0f);
+			matrixA[0] = j - 1;
+			matrixA[1] = heightMap[int(j - 1) + 100][int(i - 1) + 100];
+			matrixA[2] = i - 1;
+
+			matrixB[0] = j;
+			matrixB[1] = heightMap[int(j) + 100][int(i) + 100];
+			matrixB[2] = i;
+
+			matrixMid[0] = (matrixA[0] + matrixB[0]) / 2;
+			matrixMid[1] = (matrixA[1] + matrixB[1]) / 2;
+			matrixMid[2] = (matrixA[2] + matrixB[2]) / 2;
+
+			matrixA[0] = j - 1 - matrixMid[0];
+			matrixA[1] = heightMap[int(j - 1) + 100][int(i) + 100] - matrixMid[1];
+			matrixA[2] = i - matrixMid[2];
+		
+			matrixB[0] -= matrixMid[0];
+			matrixB[1] -= matrixMid[1];
+			matrixB[2] -= matrixMid[2];
+
+			matrixNormal[0] = matrixB[1] * matrixA[2] - matrixB[2] * matrixA[1];
+			matrixNormal[1] = matrixB[2] * matrixA[0] - matrixB[0] * matrixA[2];
+			matrixNormal[2] = matrixB[0] * matrixA[1] - matrixB[1] * matrixA[0];
+			matrixNormal[0] *= -1;
+			matrixNormal[1] *= -1;
+			matrixNormal[2] *= -1;
+			glNormal3f(matrixNormal[0], matrixNormal[1], matrixNormal[2]);
+			
+			glVertex3f(j - 1, heightMap[int(j - 1)+100][int(i - 1) + 100], i - 1);
+			glVertex3f(j - 1, heightMap[int(j - 1) + 100][int(i) + 100], i);
+			glVertex3f(j, heightMap[int(j) + 100][int(i) + 100], i);
+			glVertex3f(j, heightMap[int(j) + 100][int(i - 1) + 100], i - 1);
+		}
+	}
+
 	glEnd();
 }
 

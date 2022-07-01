@@ -92,7 +92,8 @@ class TrainWindow : public Fl_Double_Window {
 
 		// we have other widgets as part of the sample solution
 		// this is not for 559 students to know about
-		float gravity = 1.0f;
+		float acc = 0.0f;
+
 #ifdef EXAMPLE_SOLUTION
 	ExampleWidgets ew;
 #endif

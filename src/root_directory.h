@@ -1,0 +1,1 @@
+const char * logl_root = "C:/Users/koach/Desktop/project3/RollerCoasters/src/";

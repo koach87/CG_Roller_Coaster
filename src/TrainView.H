@@ -51,6 +51,7 @@ class CTrack;
 // this uses the old ArcBall Code
 #include "Utilities/ArcBallCam.H"
 #include "TrainWindow.H"
+#include<iostream>
 class TrainView : public Fl_Gl_Window
 {
 	public:
@@ -80,12 +81,16 @@ class TrainView : public Fl_Gl_Window
 		void drawTrack(bool doingShadow);
 
 		//drawTrain
-		void drawTrain(bool doingShadow, Pnt3f pos0, Pnt3f pos1, Pnt3f ori);
+		void drawTrain(bool doingShadow, Pnt3f pos0, Pnt3f pos1, Pnt3f ori, bool head = false);
 
 		//drawWheel
 		void drawWheel();
 		//void drawWheel(bool doingShadow, Pnt3f pos0, Pnt3f pos1, Pnt3f ori);
 
+		void drawModel();
+		void drawTunnel();
+
+		void drawCube(Pnt3f p0, Pnt3f p1, Pnt3f p2, Pnt3f p3);
 	public:
 		ArcBallCam		arcball;			// keep an ArcBall for the UI
 		int				selectedCube;  // simple - just remember which cube is selected
@@ -100,12 +105,22 @@ class TrainView : public Fl_Gl_Window
 		int nonArcCnt = 0;
 		int point_index = 0;
 		int carAmount = 3;
-		int carInterval = 200;
-		float POINT_INTERVAL_LEN = 0.1f;
+		int carInterval = 30;
+		float POINT_INTERVAL_LEN = 1.0f;
 		float POINT_CNT_LEN = 0.0f;
 		float RAIL_INTERVAL_LEN = 10.0f;
 		float RAIL_WIDTH = 3.0f;
 		float RAIL_CNT_LEN = 0.0f;
 		float DIS = 0.0f;
 		float DIVIDE_LINE = 1000.0f;
+
+		// adaptive 
+		bool adaptiveLock = false;
+		bool firstLock = true;
+		bool secondLock = true;
+		Pnt3f lastTwoPoint;
+		Pnt3f lastPoint;
+		Pnt3f lastVec;
+		Pnt3f nowVec;
+		int cc = 0;
 };
